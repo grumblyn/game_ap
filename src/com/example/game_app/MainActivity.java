@@ -29,6 +29,8 @@ public class MainActivity extends Activity {
 	private FrameLayout ball;
 	private float startx;
 	private float starty;
+	private double accx;
+	private double accy;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,8 +40,8 @@ public class MainActivity extends Activity {
 		DisplayMetrics outMetrics = new DisplayMetrics ();
 		display.getMetrics(outMetrics);
 		
-		x = 1000;
-		y = 1000;
+		x = 400;
+		y = 400;
 		currentx=0;
 		currenty=0;
 		
@@ -64,14 +66,10 @@ public class MainActivity extends Activity {
 	}
 	
 	
-
-//	public void launch(View v, float x, float y, float currentx, float currenty) {
 	public void launch() {
-		//ball = (FrameLayout) findViewById(R.id.ball);
 		RelativeLayout parent = (RelativeLayout) findViewById(R.id.parent);
-		//float currentx = 0;
-		//float currenty = 0;
-		
+		accx = .8;
+		accy = .8;
 		changedirx = false;
 		changediry = false;
 		
@@ -90,13 +88,10 @@ public class MainActivity extends Activity {
 			if(tempx + ball.getLeft() >= maxw) {
 				changedirx = true;
 				tempx = maxw - ball.getLeft();
-				//tempx = maxw - currentx;
-				//tempx = maxw;
 				
 			}
 			if(ball.getTop() + y <= 0) {
 				changediry = true;
-				//tempy = ball.getTop();
 				tempy = (-1)*ball.getTop();
 			}
 			if(ball.getTop() + tempy >= maxh) {
@@ -118,30 +113,29 @@ public class MainActivity extends Activity {
 
 				@Override
                         public void onAnimationEnd(Animation animation) {
+					
 					if(!changedirx){
 						currentx = currentx + x;
 					}
 					if(!changediry){
 						currenty = currenty + y;
 					}
-//					currentx = currentx + tempx;
-//					currenty = currenty + tempy;
+
 					if(changedirx == true){
 						x = -x;	
 						currentx = tempx;
 					}
-					if(changediry == true){
-						
+					if(changediry == true){			
 						y = y*(-1);
 						currenty = tempy;
 					}
-					//FrameLayout ball = (FrameLayout) findViewById(R.id.ball);
+					
 					int checkx = ball.getLeft();
 					int checky = ball.getTop();
 					ball.setTop(checky);
 					ball.setLeft(checkx);
-					x = (float) (.8*x);
-					y = (float) (.8*y);
+					x = (float) (accx*x);
+					y = (float) (accy*y);
 					//Toast.makeText(getApplicationContext(), "c "+currentx+" x "+x+" t"+tempx, Toast.LENGTH_SHORT).show();
 					if(Math.abs(x) >= 1 || Math.abs(y) >= 1){
 						launch();

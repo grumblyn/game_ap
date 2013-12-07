@@ -32,11 +32,12 @@ public final class R {
         public static final int wood=0x7f020008;
     }
     public static final class id {
-        public static final int action_settings=0x7f080004;
-        public static final int ball=0x7f080001;
-        public static final int launch=0x7f080003;
+        public static final int action_settings=0x7f080005;
+        public static final int ball=0x7f080002;
+        public static final int launch=0x7f080004;
         public static final int parent=0x7f080000;
-        public static final int restart=0x7f080002;
+        public static final int restart=0x7f080003;
+        public static final int score=0x7f080001;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -51,6 +52,8 @@ public final class R {
         public static final int launch=0x7f050004;
         public static final int marble=0x7f050003;
         public static final int restart=0x7f050005;
+        public static final int score=0x7f050007;
+        public static final int score_board=0x7f050006;
     }
     public static final class style {
         /** 

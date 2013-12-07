@@ -7,4 +7,6 @@
     <string name="marble">marble</string>
     <string name="launch">launch</string>
 	<string name="restart">restart</string>
+	<string name="score_board">score</string>
+	<string name="score">0</string>
 </resources>
