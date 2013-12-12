@@ -1,5 +1,5 @@
 /** Automatically generated file. DO NOT MODIFY */
-package com.example.game_app;
+package com.example.Stewart;
 
 public final class BuildConfig {
     public final static boolean DEBUG = true;
