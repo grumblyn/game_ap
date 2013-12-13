@@ -27,22 +27,30 @@ public final class R {
         public static final int circle3=0x7f020003;
         public static final int ic_launcher=0x7f020004;
         public static final int marble=0x7f020005;
-        public static final int selector=0x7f020006;
-        public static final int semicircle=0x7f020007;
-        public static final int wood=0x7f020008;
+        public static final int marbles=0x7f020006;
+        public static final int selector=0x7f020007;
+        public static final int semicircle=0x7f020008;
+        public static final int titlepage=0x7f020009;
+        public static final int titlepage2=0x7f02000a;
+        public static final int wood=0x7f02000b;
     }
     public static final class id {
-        public static final int a=0x7f080003;
-        public static final int action_settings=0x7f080007;
-        public static final int ball=0x7f080004;
-        public static final int launch=0x7f080006;
-        public static final int linear=0x7f080001;
-        public static final int parent=0x7f080000;
-        public static final int restart=0x7f080005;
-        public static final int score=0x7f080002;
+        public static final int a=0x7f080004;
+        public static final int action_settings=0x7f08000b;
+        public static final int back=0x7f080000;
+        public static final int ball=0x7f080005;
+        public static final int front=0x7f080008;
+        public static final int launch=0x7f080007;
+        public static final int linear=0x7f080002;
+        public static final int parent=0x7f080001;
+        public static final int restart=0x7f080006;
+        public static final int score=0x7f080003;
+        public static final int start=0x7f08000a;
+        public static final int title=0x7f080009;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int activity_game=0x7f030000;
+        public static final int activity_main=0x7f030001;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -54,8 +62,9 @@ public final class R {
         public static final int launch=0x7f050004;
         public static final int marble=0x7f050003;
         public static final int restart=0x7f050005;
-        public static final int score=0x7f050007;
-        public static final int score_board=0x7f050006;
+        public static final int score=0x7f050008;
+        public static final int score_board=0x7f050007;
+        public static final int start=0x7f050006;
     }
     public static final class style {
         /** 
